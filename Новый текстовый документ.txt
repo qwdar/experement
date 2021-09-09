@@ -1,0 +1,22 @@
+ MAIN_PUB_KEY=$(cat ${COIN_NAME}-main.txt | grep "^pubkey:" | sed 's/^pubkey: //')
+    MERKLE_HASH=$(cat ${COIN_NAME}-main.txt | grep "^merkle hash:" | sed 's/^merkle hash: //')
+    TIMESTAMP=$(cat ${COIN_NAME}-main.txt | grep "^time:" | sed 's/^time: //')
+    BITS=$(cat ${COIN_NAME}-main.txt | grep "^bits:" | sed 's/^bits: //')
+
+    MAIN_NONCE=$(cat ${COIN_NAME}-main.txt | grep "^nonce:" | sed 's/^nonce: //')
+    TEST_NONCE=$(cat ${COIN_NAME}-test.txt | grep "^nonce:" | sed 's/^nonce: //')
+    REGTEST_NONCE=$(cat ${COIN_NAME}-regtest.txt | grep "^nonce:" | sed 's/^nonce: //')
+
+    MAIN_GENESIS_HASH=$(cat ${COIN_NAME}-main.txt | grep "^genesis hash:" | sed 's/^genesis hash: //')
+    TEST_GENESIS_HASH=$(cat ${COIN_NAME}-test.txt | grep "^genesis hash:" | sed 's/^genesis hash: //')
+    REGTEST_GENESIS_HASH=$(cat ${COIN_NAME}-regtest.txt | grep "^genesis hash:" | sed 's/^genesis hash: //')
+
+
+
+
+// Note that of those with the service bits flag, most only support a subset of possible options
+        vSeeds.emplace_back("seed-a.litecoin.loshan.co.uk", true);
+        vSeeds.emplace_back("dnsseed.thrasher.io", true);
+        vSeeds.emplace_back("dnsseed.litecointools.com", true);
+        vSeeds.emplace_back("dnsseed.litecoinpool.org", true);
+        vSeeds.emplace_back("dnsseed.koin-project.com", false);
